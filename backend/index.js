@@ -17,6 +17,7 @@ mongoose.connect(process.env.MONGO_DB_URL).then(() => {
 const corsOptions = {
     origin: [
         "http://localhost:5173",
+        "https://heli-class-rooms.vercel.app/"
     ],
     credentials: true
 };
