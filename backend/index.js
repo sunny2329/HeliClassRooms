@@ -15,15 +15,11 @@ mongoose.connect(process.env.MONGO_DB_URL).then(() => {
 
 //! Cors config
 const corsOptions = {
-    origin: [
-        // "http://localhost:5173",
-        "https://heli-class-rooms.vercel.app"
-        // careers@betterhalf.ai
-    ],
+    origin: '*',
     credentials: true,
-    optionsSuccessStatus: 200,
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
+    allowedHeaders: ['Content-Type'],
+    exposedHeaders: ['Content-Type']
 };
 
 app.use(cors(corsOptions));
