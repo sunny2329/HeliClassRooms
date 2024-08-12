@@ -7,13 +7,13 @@ const classroomRouter = express.Router();
 
 //! Create a new classroom
 
-classroomRouter.post('/api/v1/classrooms/create',classroomController.createClassroom);
+classroomRouter.post('/api/v1/classrooms/create/',classroomController.createClassroom);
 
 
-classroomRouter.get('/api/v1/classrooms/getClassroom',classroomController.getClassroomsByTeacher);
+classroomRouter.get('/api/v1/classrooms/getClassroom/',classroomController.getClassroomsByTeacher);
 
 
-classroomRouter.get('/api/v1/classrooms/getAllClassrooms',classroomController.getAllClassrooms);
+classroomRouter.get('/api/v1/classrooms/getAllClassrooms/',classroomController.getAllClassrooms);
 
 
 export default classroomRouter;
