@@ -12,6 +12,9 @@ export const getClassroomByTeacher = createAsyncThunk(
             const response = await axios.get(`${base_url}/api/v1/classrooms/getClassroom`,{
                 teacherId,
             }, {
+                headers:{
+                    'Content-Type': 'application/json'
+                },
                 withCredentials: true,
             });
             return response.data;
