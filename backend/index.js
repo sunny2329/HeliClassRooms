@@ -15,7 +15,10 @@ mongoose.connect(process.env.MONGO_DB_URL).then(() => {
 
 //! Cors config
 const corsOptions = {
-    origin: '*',
+    origin: [
+        // "http://localhost:3000",
+        "https://heli-class-rooms.vercel.app"
+    ],
     credentials: true,
     methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
     allowedHeaders: ['Content-Type'],
