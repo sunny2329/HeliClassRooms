@@ -19,7 +19,10 @@ const corsOptions = {
         "http://localhost:5173",
         "https://heli-class-rooms.vercel.app/"
     ],
-    credentials: true
+    credentials: true,
+    optionsSuccessStatus: 200,
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 };
 
 app.use(cors(corsOptions));
