@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { Cookies, withCookies } from 'react-cookie'
 
-const base_url = "http://localhost:4000";
+const base_url = "https://heliclassrooms-1.onrender.com";
 
 export const loginUser = createAsyncThunk(
     'auth/loginUser',

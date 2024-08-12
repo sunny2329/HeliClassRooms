@@ -1,7 +1,7 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import axios from 'axios'
 
-const base_url = "http://localhost:4000";
+const base_url = "https://heliclassrooms-1.onrender.com";
 
 export const registerTeacher = createAsyncThunk(
     'registerTeacher',
