@@ -35,7 +35,7 @@ app.use('/',classroomRouter);
 
 app.get('/', (req, res) => {
     res.json({
-        msg: 'hello word'
+        msg: 'Backend'
     })
 })
 
