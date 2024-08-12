@@ -57,7 +57,8 @@ export const createClassroom = createAsyncThunk(
                 headers:{
                     'Content-Type' : 'application/json',
                     'Authorization': `Bearer ${token}`
-                }
+                },
+                withCredentials:true
             })
             const data = await response.data;
             return data;
@@ -76,7 +77,8 @@ export const getAllClass = createAsyncThunk(
                 headers:{
                     'Content-Type' : 'application/json',
                     'Authorization': `Bearer ${token}`
-                }
+                },
+                withCredentials:true
             });
             const data = await response.data;
             return data;
