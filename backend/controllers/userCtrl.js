@@ -47,8 +47,9 @@ export const userController = {
 
         res.cookie('token', token, {
             httpOnly: true,
-            sameSite: 'Lax',
-            maxAge: 30 * 24 * 60 * 60 * 1000
+            secure: true, // Set to true if using HTTPS
+            sameSite: 'None', // Required for cross-site cookies
+            maxAge: 3600000 // Cookie expiry time
         })
 
 
